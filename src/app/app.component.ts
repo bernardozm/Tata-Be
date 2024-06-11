@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 @Component({
   selector: 'app-root',
+  template: '<app-timeline></app-timeline>',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [TimelineComponent],
 })
-export class AppComponent {
-  title = 'Tata-Be';
-}
+export class AppComponent {}

@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  color: #ff4081;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+}

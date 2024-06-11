@@ -1,0 +1,24 @@
+<div class="timeline-container">
+  <div class="timeline-item" *ngFor="let item of timelineItems; let i = index">
+    <div class="timeline-content" [@fadeIn]="i">
+      <img [src]="item.image" alt="Timeline image {{ i + 1 }}" />
+      <div class="text">
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="camera-section" *ngIf="!webcamImage">
+    <button (click)="triggerSnapshot()" class="btn btn-primary">
+      Tirar Foto
+    </button>
+    <webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)">
+    </webcam>
+  </div>
+
+  <div class="captured-photo" *ngIf="webcamImage">
+    <h2>Foto Capturada</h2>
+    <img [src]="webcamImage.imageAsDataUrl" alt="Captured Photo" />
+  </div>
+</div>
